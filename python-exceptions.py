@@ -1,25 +1,23 @@
-# python excepition
-
-# try:
-#     num1 = int(input("Number: "))
-#     print(f"Square of {num1} is: {num1**2}")
-# except Exception:
-#     print("is not an integer")
-# finally:
-#     print("execution finished")
+# Exception
+def func_one(var1):
+    return var1, var5
 
 
-# raising a custom exception
-def func(num, num2):
-    try:
-        if not num / num2 :
-            raise ZeroDivisionError
-        else:
-            return f"{num} is divisible by {num2}"
-    except ZeroDivisionError:
-        return f"num2 should not be 0"
-    finally:
-        print("finished")
-print(func(56, 20))
+def func_two(var3):
+    return var3
 
-# in functions finaly block is executed before the function returns
+
+def func_four(var4):
+    return var4
+
+
+try:
+    # print(func_three(50))
+    print(func_one(44))
+except Exception:
+    print(func_two(55))
+finally:
+    print(func_four(50))
+
+# Exception in try block force it to terminate and that exception is caught by except block
+# code in except block executes and later finally block
