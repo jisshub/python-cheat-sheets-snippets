@@ -16,7 +16,7 @@ for eachData in personData:
 # same dictionary item - thus iteration backs to the outer loop.
 
 # similar in case of Female. if sex is female. terminate the inner loop and returns 
-# to outer for loop
+# to outer for loop to iterate next dict item
 
 
 
