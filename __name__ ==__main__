@@ -1,0 +1,35 @@
+when python runs a file, before running the code
+it sets a special variable __name__ == __main__
+
+default __name__ == __main__
+
+but incase if v import file1 in to another file2
+and tries to run method/code of the file1 from the file2
+here __name__ is set to file1 instead of __main__
+
+
+
+note: __name__ == __main__ whenever python runs a source file directly,
+	whenever the file is imported it sets to imported file's name
+
+Example 
+-------
+
+mod1.py
+-----------
+def sample():
+    if __name__ == "__main__":
+        return True
+    return __name__
+
+
+mod2.py
+-------------
+import mod1
+
+print(mod1.sample())
+# gets the module name that is imported, since that module is executed from this python file - not directly by the python.
+
+print(__name__)
+# gives the __main__ as result since this file is executed by the python directly
+
